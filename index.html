@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>十动然拒poi</title>
+    <style>
+        *{margin: 0;padding: 0}
+        .box{width:100%;height: 10rem;/*background-color: brown;*/display: flex;text-align: center;}
+        .ka{
+            flex: 1;
+            width: 1rem;
+            height: 6rem;
+            background-color: #1b6d85;
+            display: inline-block;
+            margin-top:25px;
+            margin-right:1rem;
+            margin-left:1rem;
+            background-image: url("images/QQ截图20171208160249.png");
+            background-size: 100% 100%;
+            border: 1px solid salmon;
+           ;
+        }
+
+    </style>
+    <script>
+        document.documentElement.style.fontSize=innerWidth/30+"px"
+    </script>
+</head>
+<body>
+<div class="box" id="box">
+    <span class="ka"></span>
+    <span class="ka"></span>
+    <span class="ka"></span>
+    <span class="ka"></span>
+    <span class="ka"></span>
+
+</div>
+
+</body>
+<script src="jquery/jquery.js"></script>
+<script>
+    var spans=$("#box").children(".ka")
+    var flag=true
+    spans.click(function(){
+
+            if($(this).css("marginTop")=="15px"){
+         /*       console.log("s")*/
+                $(this).css("marginTop","25px")
+
+            }
+        else{
+                $(this).css("marginTop","15px").siblings("span").css("marginTop","25px")
+            }
+
+
+
+
+    })
+</script>
+</html>
